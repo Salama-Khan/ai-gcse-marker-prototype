@@ -1,0 +1,156 @@
+import streamlit as st
+import pandas as pd
+import openai
+import re
+import os
+import datetime
+import csv
+
+question_df = pd.read_csv("question_bankbio.csv")
+
+
+client = openai.OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+
+
+def clean_text(text):
+    return text.replace("\n", " ").replace("\r", " ").strip()
+
+def extract_max_mark(row):
+    return row["max_marks"]
+
+
+st.title("AI GCSE Biology Marker")
+st.write("Select a topic and question to answer and get AI-generated marking.")
+
+
+topics = question_df['topic'].unique()
+selected_topic = st.selectbox("Choose a topic:", topics)
+
+questions_in_topic = question_df[question_df['topic'] == selected_topic]
+question_texts = questions_in_topic['question_text'].tolist()
+
+selected_question = st.selectbox("Select a question:", question_texts)
+question_row = questions_in_topic[questions_in_topic['question_text'] == selected_question].iloc[0]
+
+question_text = question_row['question_text']
+mark_scheme = question_row['mark_scheme']
+max_marks = question_row['max_marks']
+
+st.markdown(f"**Max Marks:** {question_row['max_marks']}")
+
+student_answer = st.text_area("Enter your answer:")
+
+SYSTEM_PROMPT = """
+You are an expert GCSE Biology exam marker. Mark answers using the provided mark scheme.
+Award only what is clearly earned, following official criteria strictly.
+
+Use this format:
+
+### Question:
+{question}
+
+### Mark Scheme:
+{mark_scheme}
+
+### Student Answer:
+{student_answer}
+
+### Marking:
+| Criterion | Met? | Mark |
+|-----------|------|------|
+| (criterion 1) | Fully met / Not met | X |
+| (criterion 2) | Fully met / Not met | X |
+
+### Total Marks:
+X / Total Marks
+
+### Feedback:
+{constructive_feedback}
+
+### Exam Tip:
+{one_improvement_tip}
+"""
+
+if st.button("Mark My Answer") and student_answer.strip():
+    user_prompt = f"""
+### Question:
+{question_text}
+
+### Mark Scheme:
+{mark_scheme}
+
+### Student Answer:
+{student_answer}
+
+### Marking:
+| Criterion | Met? | Mark |
+|-----------|------|------|
+"""
+
+    with st.spinner("Marking in progress..."):
+        response = client.chat.completions.create(
+            model="gpt-4o",
+            messages=[
+                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "user", "content": user_prompt}
+            ],
+            temperature=0
+        )
+
+        output = response.choices[0].message.content
+        st.markdown("## Marking Result")
+        st.markdown(output)
+
+        lines = output.splitlines()
+        total_marks = ""
+        feedback = ""
+        exam_tip = ""
+        current_section = None
+
+        for line in lines:
+            line = line.strip()
+            if line.startswith("### Total Marks:"):
+                current_section = "total_marks"
+                continue
+            elif line.startswith("### Feedback:"):
+                current_section = "feedback"
+                continue
+            elif line.startswith("### Exam Tip:"):
+                current_section = "exam_tip"
+                continue
+
+            if current_section and line:
+                if current_section == "total_marks":
+                    total_marks = line
+                elif current_section == "feedback":
+                    feedback = line
+                elif current_section == "exam_tip":
+                    exam_tip = line
+                current_section = None
+
+        awarded = total_marks.split("/")[0].strip() if total_marks else "0"
+
+        if int(awarded) == int(max_marks):
+            st.success(f"✅ Full marks! {total_marks}")
+        elif int(awarded) == 0:
+            st.error(f"❌ No marks awarded. {total_marks}")
+        else:
+            st.warning(f"⚠ Partial marks: {total_marks}")
+
+        # Save results
+        csv_file = "results.csv"
+        write_header = not os.path.isfile(csv_file) or os.path.getsize(csv_file) == 0
+
+        with open(csv_file, mode='a') as file:
+            writer = csv.writer(file)
+            if write_header:
+                writer.writerow(["Timestamp", "Question", "Answer", "Marks", "Max Marks", "Feedback", "Tip"])
+            writer.writerow([
+                datetime.datetime.now().isoformat(),
+                clean_text(question_text),
+                clean_text(student_answer),
+                awarded,
+                max_marks,
+                clean_text(feedback),
+                clean_text(exam_tip)
+            ])
