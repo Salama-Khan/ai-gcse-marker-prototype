@@ -6,7 +6,7 @@ import os
 import datetime
 import csv
 
-question_df = pd.read_csv("question_bankbio.csv")
+question_df = pd.read_csv("data/question_bankbio.csv")
 
 
 client = openai.OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
