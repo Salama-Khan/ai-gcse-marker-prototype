@@ -6,7 +6,9 @@ import os
 import datetime
 import csv
 
-question_df = pd.read_csv("question_bankbio.csv")
+
+url = "https://raw.githubusercontent.com/Salama-Khan/scaling-guide/refs/heads/main/streamlit%20prototype/question_bankbio.csv?token=GHSAT0AAAAAADF2F64MZZFY4YOUB63NJ2DK2CSRXXA"
+question_df = pd.read_csv(url)
 
 
 client = openai.OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
