@@ -5,6 +5,19 @@ import re
 import os
 import datetime
 import csv
+import gspread
+import json
+from google.oauth2.service_account import Credentials
+
+SERVICE_ACCOUNT_FILE = 'credentials.json'  # <-- Your downloaded key file
+SHEET_NAME = 'Research Log AI Marker'  # <-- Must match the sheet name exactly
+SHEET_KEY = st.secrets["GOOGLE_SHEET_KEY"]
+
+scope = ['https://www.googleapis.com/auth/spreadsheets',]
+gdrive_creds = json.loads(st.secrets["G_SERVICE_JSON"])
+creds = Credentials.from_service_account_info(gdrive_creds, scopes=scope)
+gc = gspread.authorize(creds)
+sheet = gc.open_by_key(SHEET_KEY).sheet1
 
 
 url = "https://raw.githubusercontent.com/Salama-Khan/scaling-guide/main/streamlit%20prototype/question_bankbio.csv"
@@ -20,6 +33,17 @@ def clean_text(text):
 def extract_max_mark(row):
     return row["max_marks"]
 
+def save_results_to_google_sheets(question_text, student_answer, awarded, max_marks, feedback, exam_tip):
+    new_row = [
+        str(datetime.datetime.now().isoformat()),
+        str(question_text),
+        str(student_answer),
+        str(awarded),
+        str(max_marks),
+        str(feedback),
+        str(exam_tip)
+    ]
+    sheet.append_row(new_row)
 
 st.title("AI GCSE Biology Marker")
 st.write("Select a topic and question to answer and get AI-generated marking.")
@@ -139,20 +163,5 @@ if st.button("Mark My Answer") and student_answer.strip():
         else:
             st.warning(f"⚠ Partial marks: {total_marks}")
 
-        # Save results
-        csv_file = "results.csv"
-        write_header = not os.path.isfile(csv_file) or os.path.getsize(csv_file) == 0
-
-        with open(csv_file, mode='a') as file:
-            writer = csv.writer(file)
-            if write_header:
-                writer.writerow(["Timestamp", "Question", "Answer", "Marks", "Max Marks", "Feedback", "Tip"])
-            writer.writerow([
-                datetime.datetime.now().isoformat(),
-                clean_text(question_text),
-                clean_text(student_answer),
-                awarded,
-                max_marks,
-                clean_text(feedback),
-                clean_text(exam_tip)
-            ])
+        save_results_to_google_sheets(question_text, student_answer, awarded, max_marks, feedback, exam_tip)
+        st.success("✅ Your answer has been saved to Google Sheets.")
