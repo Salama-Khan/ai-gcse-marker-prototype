@@ -7,7 +7,7 @@ import datetime
 import csv
 
 
-url = "https://raw.githubusercontent.com/Salama-Khan/scaling-guide/refs/heads/main/streamlit%20prototype/question_bankbio.csv?token=GHSAT0AAAAAADF2F64NTTQQUPNVZLHEHTBM2CSUIOQ"
+url = "https://raw.githubusercontent.com/Salama-Khan/scaling-guide/main/streamlit%20prototype/question_bankbio.csv"
 question_df = pd.read_csv(url)
 
 
