@@ -1,36 +1,36 @@
 id,subject,topic,sub_topic,question_text,mark_scheme,max_marks,exam_board
-bio_001,Biology,Cell Biology,Cell Structure,Give two similarities between prokaryotic cells and eukaryotic cells.,"Any two from:
+bio_001,Biology,Cell Biology,Cell Structure,Give two similarities between prokaryotic cells and eukaryotic cells.,Any two from:
 - both have cytoplasm
 - both have (cell) membrane
 - both have DNA / genetic material
-- both have ribosomes",2,AQA
+- both have ribosomes,2,AQA
 bio_002,Biology,Cell Biology,Cell Division,Name the type of cell division that produces genetically identical body cells for growth and repair.,Mitosis,1,AQA
-bio_003,Biology,Cell Biology,Cell Structure,What is the function of the nucleus?,"Either:
+bio_003,Biology,Cell Biology,Cell Structure,What is the function of the nucleus?,Either:
 - controls the (activities of the) cell
 Or:
-- contains genetic information / genes / DNA / chromosomes",1,AQA
-bio_004,Biology,Cell Biology,Cell Structure,Name one type of cell that does not contain a nucleus.,"One of:
+- contains genetic information / genes / DNA / chromosomes,1,AQA
+bio_004,Biology,Cell Biology,Cell Structure,Name one type of cell that does not contain a nucleus.,One of:
 - red blood cell / RBC
-- bacteria / prokaryote (name of bacteria allowed)",1,AQA
-bio_005,Biology,Cell Biology,Cell Structure,Give two advantages of using an electron microscope instead of a light microscope.,"Any two of:
+- bacteria / prokaryote (name of bacteria allowed),1,AQA
+bio_005,Biology,Cell Biology,Cell Structure,Give two advantages of using an electron microscope instead of a light microscope.,Any two of:
 - higher magnification
 - higher resolution
-- higher resolving power",2,AQA
-bio_006,Biology,Cell Biology,Cell Structure,What is the function of ribosomes?,"One of:
+- higher resolving power,2,AQA
+bio_006,Biology,Cell Biology,Cell Structure,What is the function of ribosomes?,One of:
 - make / synthesise / produce protein
-- produce enzymes",1,AQA
-bio_007,Biology,Cell Biology,Cell Structure,Explain why the red blood cell bursts but the plant cell does not burst when placed in water.,"- Water enters (the cells) by osmosis / diffusion OR water enters and the cell starts to swell → 1 mark
-- Plant cell has a cell wall (which prevents it from bursting) OR red blood cell has no cell wall (so it swells and bursts) → 1 mark",2,AQA
-bio_008,Biology,Cell Biology,Cell Structure,Explain one way in which the root hair cell is adapted to take up water.,"Either:
+- produce enzymes,1,AQA
+bio_007,Biology,Cell Biology,Cell Structure,Explain why the red blood cell bursts but the plant cell does not burst when placed in water.,- Water enters (the cells) by osmosis / diffusion OR water enters and the cell starts to swell → 1 mark
+- Plant cell has a cell wall (which prevents it from bursting) OR red blood cell has no cell wall (so it swells and bursts) → 1 mark,2,AQA
+bio_008,Biology,Cell Biology,Cell Structure,Explain one way in which the root hair cell is adapted to take up water.,Either:
 - large surface area → for more / faster osmosis OR to create / maintain concentration / water potential gradient
 Or:
-- thin (cell) walls → for short(er) diffusion distance",2,AQA
-bio_009,Biology,Cell Biology,Transport in Cells,Explain why root hair cells contain mitochondria.,"- (aerobic) respiration occurs in mitochondria → 1 mark
+- thin (cell) walls → for short(er) diffusion distance,2,AQA
+bio_009,Biology,Cell Biology,Transport in Cells,Explain why root hair cells contain mitochondria.,- (aerobic) respiration occurs in mitochondria → 1 mark
 - mitochondria / respiration release energy → 1 mark
 - energy used for active transport → 1 mark
 - either: to transport ions against the concentration gradient → 1 mark
   or: from a low concentration to a high concentration → 1 mark,4,AQA
-bio_010,Biology,Cell Biology,Cell Structure,Compare the structure and function of xylem tissue and phloem tissue.,"Structure:
+bio_010,Biology,Cell Biology,Cell Structure,Compare the structure and function of xylem tissue and phloem tissue.,Structure:
 - xylem is made of dead cells and phloem is made of living cells
 - phloem cells have pores in their end walls and xylem cells do not
 - xylem is hollow or xylem does not contain cytoplasm and phloem contains cytoplasm
@@ -48,8 +48,8 @@ Marking notes:
 - Mention ≥ 3 structural + 3 functional comparisons → 6 marks
 - Mention ≥ 2 each → 4 marks
 - Mention 1 each → 2 marks
-- No knowledge → 0 marks",6,AQA
-bio_011,Biology,Cell Biology,Cell Structure,Compare the structure of a red blood cell with the structure of a plant cell.,"Differences:
+- No knowledge → 0 marks,6,AQA
+bio_011,Biology,Cell Biology,Cell Structure,Compare the structure of a red blood cell with the structure of a plant cell.,Differences:
 - red blood cell has no nucleus; plant cell has a nucleus
 - red blood cell has no cell wall; plant cell has a cell wall
 - red blood cell is a biconcave disc; plant cells have various shapes
@@ -67,73 +67,73 @@ Both have:
 
 Marking notes:
 - Full 6 marks = 6 points total (differences + similarities)
-- No knowledge → 0 marks",6,AQA
+- No knowledge → 0 marks,6,AQA
 bio_012,Biology,Cell Biology,Cell Structure,Name the structures inside the cell nucleus that contain DNA.,chromosome(s) allow chromatid(s) / gene(s) / allele(s),1,AQA
 bio_013,Biology,Cell Biology,Cell Structure,What type of substance does a gene code for?,protein allow polypeptide,1,AQA
 bio_014,Biology,Cell Biology,Cell Structure,Name the chemical which the genetic material is made from.,DNA allow deoxyribonucleic acid for 1,1,AQA
-bio_015,Biology,Cell Biology,Cell Division,Explain how a transplant of bone marrow cells can help to treat medical conditions.,"(bone marrow) cells differentiate into many / other types of (named) cell -> 1 mark
+bio_015,Biology,Cell Biology,Cell Division,Explain how a transplant of bone marrow cells can help to treat medical conditions.,(bone marrow) cells differentiate into many / other types of (named) cell -> 1 mark
 Either:
 - (so) will cure diseases where new cells are needed
 - or: will cure diseases where cells are damaged
-Allow: anaemia / leukaemia / blood disorders / paralysis / diabetes -> 1 mark",2,AQA
-bio_016,Biology,Cell Biology,Cell Structure,Give three differences between the prokaryotic cell and the eukaryotic cells.,"Any three from:
+Allow: anaemia / leukaemia / blood disorders / paralysis / diabetes -> 1 mark,2,AQA
+bio_016,Biology,Cell Biology,Cell Structure,Give three differences between the prokaryotic cell and the eukaryotic cells.,Any three from:
 - prokaryotic cell is smaller
 - prokaryotic cell has no mitochondria
 - prokaryotic cell has no nucleus or DNA is free in the cytoplasm
 - prokaryotic cell has a single loop of DNA
 - prokaryotic cell has plasmids
-Allow converses with eukaryotic descriptions",3,AQA
-bio_017,Biology,Cell Biology,Cell Division,Describe three differences between the processes of mitosis and meiosis.,"Any three comparative points:
+Allow converses with eukaryotic descriptions,3,AQA
+bio_017,Biology,Cell Biology,Cell Division,Describe three differences between the processes of mitosis and meiosis.,Any three comparative points:
 - mitosis produces two daughter cells, meiosis produces four
 - one division in mitosis, two in meiosis
 - mitosis produces diploid cells, meiosis produces haploid
 - mitosis maintains chromosome number, meiosis halves it
-- mitosis produces genetically identical cells, meiosis produces genetically different cells",3,AQA
-bio_018,Biology,Cell Biology,Cell Division,What is a stem cell?,"an undifferentiated / unspecialised cell -> 1 mark
-that can differentiate / become / change into (many) other cell types -> 1 mark",2,AQA
-bio_019,Biology,Organisation,Cancer,Give one way a malignant tumour differs from a benign tumour.,"Either:
+- mitosis produces genetically identical cells, meiosis produces genetically different cells,3,AQA
+bio_018,Biology,Cell Biology,Cell Division,What is a stem cell?,an undifferentiated / unspecialised cell -> 1 mark
+that can differentiate / become / change into (many) other cell types -> 1 mark,2,AQA
+bio_019,Biology,Organisation,Cancer,Give one way a malignant tumour differs from a benign tumour.,Either:
 - malignant tumours invade / spread to other tissues via the blood
-- malignant tumours form secondary tumours in other organs",1,AQA
-bio_020,Biology,Cell Biology,Cell Division,Stem cells can also be obtained from human embryos. Evaluate the use of stem cells from a patient’s own bone marrow instead of stem cells from an embryo. Give a conclusion to your answer.,"Level 3 (5–6 marks): A judgement, strongly linked and logically supported by a sufficient range of correct reasons, is given. Must include ≥3 pros and cons of each source.
+- malignant tumours form secondary tumours in other organs,1,AQA
+bio_020,Biology,Cell Biology,Cell Division,Stem cells can also be obtained from human embryos. Evaluate the use of stem cells from a patient’s own bone marrow instead of stem cells from an embryo. Give a conclusion to your answer.,Level 3 (5–6 marks): A judgement, strongly linked and logically supported by a sufficient range of correct reasons, is given. Must include ≥3 pros and cons of each source.
 Level 2 (3–4 marks): Some logically linked reasons. Includes ≥2 of each.
 Level 1 (1–2 marks): Relevant points made. At least 1 pro and 1 con of each.
-Level 0: No relevant content.",6,AQA
-bio_021,Biology,Cell Biology,Cell Structure,Give three structures found in a plant cell but not in an animal cell.,"Any three from:
+Level 0: No relevant content.,6,AQA
+bio_021,Biology,Cell Biology,Cell Structure,Give three structures found in a plant cell but not in an animal cell.,Any three from:
 - cell wall
 - chloroplasts
-- permanent vacuole",3,AQA
-bio_022,Biology,Cell Biology,Cell Structure,Explain why muscle cells have more mitochondria than skin cells.,"- Muscle cells need more energy
+- permanent vacuole,3,AQA
+bio_022,Biology,Cell Biology,Cell Structure,Explain why muscle cells have more mitochondria than skin cells.,- Muscle cells need more energy
 - Energy is released by aerobic respiration
-- Mitochondria is where aerobic respiration occurs",3,AQA
-bio_023,Biology,Organisation,Animal Tissues,List four adaptations of the alveoli that help gas exchange.,"Any four from:
+- Mitochondria is where aerobic respiration occurs,3,AQA
+bio_023,Biology,Organisation,Animal Tissues,List four adaptations of the alveoli that help gas exchange.,Any four from:
 - large surface area
 - thin walls
 - good blood supply
 - moist lining
-- short diffusion distance",4,AQA
-bio_024,Biology,Organisation,Plant Tissues,Explain how the structure of a leaf is adapted for efficient photosynthesis.,"Any six from:
+- short diffusion distance,4,AQA
+bio_024,Biology,Organisation,Plant Tissues,Explain how the structure of a leaf is adapted for efficient photosynthesis.,Any six from:
 - broad leaf for large surface area
 - thin for short diffusion distance
 - palisade cells have many chloroplasts
 - upper epidermis is transparent to let light through
 - stomata allow gas exchange
-- veins transport water (xylem) and glucose (phloem)",6,AQA
-bio_025,Biology,Required Practical,Photosynthesis,Describe an investigation you could carry out to measure the rate of photosynthesis in pondweed.,"Any six from:
+- veins transport water (xylem) and glucose (phloem),6,AQA
+bio_025,Biology,Required Practical,Photosynthesis,Describe an investigation you could carry out to measure the rate of photosynthesis in pondweed.,Any six from:
 - use a ruler to measure distance from light source at regular intervals
 - place pondweed in water with sodium hydrogen carbonate
 - use lamp as light source
 - count number of bubbles produced over fixed time
 - control temperature and CO₂ concentration
-- repeat for reliability",6,AQA
-bio_026,Biology,Cell Biology,Cell Structure,Calculate the magnification if an image measures 20mm and the actual object is 0.02mm.,"- 20 ÷ 0.02 → 1 mark
-- Final answer: 1000 → 1 mark",2,AQA
-bio_027,Biology,Cell Biology,Cell Structure,"A bacterial population doubles every 20 minutes. Starting with 100 bacteria, how many will there be after 2 hours?","- 2 hours = 120 minutes → 1 mark
+- repeat for reliability,6,AQA
+bio_026,Biology,Cell Biology,Cell Structure,Calculate the magnification if an image measures 20mm and the actual object is 0.02mm.,- 20 ÷ 0.02 → 1 mark
+- Final answer: 1000 → 1 mark,2,AQA
+bio_027,Biology,Cell Biology,Cell Structure,A bacterial population doubles every 20 minutes. Starting with 100 bacteria, how many will there be after 2 hours?,- 2 hours = 120 minutes → 1 mark
 - 120 ÷ 20 = 6 doublings → 1 mark
 - Correct use of 100 × 2⁶ or working → 1 mark
-- Final answer: 6400 → 1 mark",4,AQA
-bio_028,Biology,Cell Biology,Transport in Cells,What is meant by the term diffusion?,"- movement / spreading out of molecules / particles → 1 mark
-- from (an area of) high(er) concentration to (an area of) low(er) concentration → 1 mark",2,AQA
-bio_029,Biology,Cell Biology,Transport in Cells,Explain how the human lungs are adapted for efficient exchange of gases by diffusion.,"Level 3 (5–6 marks): Relevant points given in detail and logically linked.
+- Final answer: 6400 → 1 mark,4,AQA
+bio_028,Biology,Cell Biology,Transport in Cells,What is meant by the term diffusion?,- movement / spreading out of molecules / particles → 1 mark
+- from (an area of) high(er) concentration to (an area of) low(er) concentration → 1 mark,2,AQA
+bio_029,Biology,Cell Biology,Transport in Cells,Explain how the human lungs are adapted for efficient exchange of gases by diffusion.,Level 3 (5–6 marks): Relevant points given in detail and logically linked.
 Level 2 (3–4 marks): Some logical linking, but not fully clear.
 Level 1 (1–2 marks): Simple points with unclear relevance.
 
@@ -141,11 +141,11 @@ Indicative content:
 - many alveoli → large surface area
 - thin walls (alveoli/capillaries) → short diffusion path
 - ventilation brings in fresh oxygen and removes CO₂ → maintains concentration gradient
-- rich capillary network → maintains gradient by removing O₂ and bringing CO₂",6,AQA
+- rich capillary network → maintains gradient by removing O₂ and bringing CO₂,6,AQA
 bio_030,Biology,Cell Biology,Transport in Cells,Name the process by which water molecules enter the root hair cell.,Osmosis allow diffusion,1,AQA
-bio_031,Biology,Cell Biology,Transport in Cells,Nitrate ions need a different method of transport into the root hair cell. Explain how the nitrate ions are transported into the root hair cell.,"- active transport → 1 mark
+bio_031,Biology,Cell Biology,Transport in Cells,Nitrate ions need a different method of transport into the root hair cell. Explain how the nitrate ions are transported into the root hair cell.,- active transport → 1 mark
 - because energy is needed → 1 mark
-- to move from low to high concentration / against concentration gradient → 1 mark",3,AQA
-bio_032,Biology,Cell Biology,Transport in Cells,Describe how one feature of the axolotl’s gills increases the rate of diffusion of oxygen.,"Any one of:
+- to move from low to high concentration / against concentration gradient → 1 mark,3,AQA
+bio_032,Biology,Cell Biology,Transport in Cells,Describe how one feature of the axolotl’s gills increases the rate of diffusion of oxygen.,Any one of:
 - gills have many projections → large surface area → 2 marks
-- gills are outside the body → good access to water → 2 marks",2,AQA
+- gills are outside the body → good access to water → 2 marks,2,AQA
