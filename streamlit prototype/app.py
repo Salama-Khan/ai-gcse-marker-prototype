@@ -52,12 +52,10 @@ st.write("Select a topic and question to answer and get AI-generated marking.")
 topics = question_df['topic'].unique()
 selected_topic = st.selectbox("Choose a topic:", topics)
 
-# sub_topics = question_df['sub_topic'].unique()
-# selected_sub_topic = st.selectbox("Choose a sub topic:", sub_topics)
+sub_topics = question_df[question_df['topic'] == selected_topic]['sub_topic'].unique()
+selected_sub_topic = st.selectbox("Choose a sub-topic:", sub_topics)
 
-# questions_in_topic = question_df[question_df['sub_topic'] == selected_sub_topic]
-
-questions_in_topic = question_df[question_df['topic'] == selected_topic]
+questions_in_topic = question_df[question_df['sub_topic'] == selected_sub_topic]
 question_texts = questions_in_topic['question_text'].tolist()
 
 selected_question = st.selectbox("Select a question:", question_texts)
