@@ -19,13 +19,13 @@ bio_005,Biology,Cell Biology,Cell Structure,Give two advantages of using an elec
 bio_006,Biology,Cell Biology,Cell Structure,What is the function of ribosomes?,"One of:
 - make / synthesise / produce protein
 - produce enzymes",1,AQA
-bio_007,Biology,Cell Biology,Cell Structure,Explain why the red blood cell bursts but the plant cell does not burst when placed in water.,"- Water enters (the cells) by osmosis / diffusion OR water enters and the cell starts to swell → 1 mark
+bio_007,Biology,Cell Biology,Transport in Cells,Explain why the red blood cell bursts but the plant cell does not burst when placed in water.,"- Water enters (the cells) by osmosis / diffusion OR water enters and the cell starts to swell → 1 mark
 - Plant cell has a cell wall (which prevents it from bursting) OR red blood cell has no cell wall (so it swells and bursts) → 1 mark",2,AQA
-bio_008,Biology,Cell Biology,Cell Structure,Explain one way in which the root hair cell is adapted to take up water.,"Either:
+bio_008,Biology,Cell Biology,Transport in Cells,Explain one way in which the root hair cell is adapted to take up water.,"Either:
 - large surface area → for more / faster osmosis OR to create / maintain concentration / water potential gradient
 Or:
 - thin (cell) walls → for short(er) diffusion distance",2,AQA
-bio_009,Biology,Cell Biology,Transport in Cells,Explain why root hair cells contain mitochondria.,"- (aerobic) respiration occurs in mitochondria → 1 mark
+bio_009,Biology,Cell Biology,Cell Structure,Explain why root hair cells contain mitochondria.,"- (aerobic) respiration occurs in mitochondria → 1 mark
 - mitochondria / respiration release energy → 1 mark
 - energy used for active transport → 1 mark
 - either: to transport ions against the concentration gradient → 1 mark
@@ -69,8 +69,8 @@ Marking notes:
 - Full 6 marks = 6 points total (differences + similarities)
 - No knowledge → 0 marks",6,AQA
 bio_012,Biology,Cell Biology,Cell Structure,Name the structures inside the cell nucleus that contain DNA.,chromosome(s) allow chromatid(s) / gene(s) / allele(s),1,AQA
-bio_013,Biology,Cell Biology,Cell Structure,What type of substance does a gene code for?,protein allow polypeptide,1,AQA
-bio_014,Biology,Cell Biology,Cell Structure,Name the chemical which the genetic material is made from.,DNA allow deoxyribonucleic acid for 1,1,AQA
+bio_013,Biology,Cell Biology,Cell Division,What type of substance does a gene code for?,protein allow polypeptide,1,AQA
+bio_014,Biology,Cell Biology,Cell Division,Name the chemical which the genetic material is made from.,DNA allow deoxyribonucleic acid for 1,1,AQA
 bio_015,Biology,Cell Biology,Cell Division,Explain how a transplant of bone marrow cells can help to treat medical conditions.,"(bone marrow) cells differentiate into many / other types of (named) cell -> 1 mark
 Either:
 - (so) will cure diseases where new cells are needed
@@ -105,7 +105,7 @@ bio_021,Biology,Cell Biology,Cell Structure,Give three structures found in a pla
 bio_022,Biology,Cell Biology,Cell Structure,Explain why muscle cells have more mitochondria than skin cells.,"- Muscle cells need more energy
 - Energy is released by aerobic respiration
 - Mitochondria is where aerobic respiration occurs",3,AQA
-bio_023,Biology,Organisation,Animal Tissues,List four adaptations of the alveoli that help gas exchange.,"Any four from:
+bio_023,Biology,Cell Biology,Cell Structure,List four adaptations of the alveoli that help gas exchange.,"Any four from:
 - large surface area
 - thin walls
 - good blood supply

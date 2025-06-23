@@ -52,15 +52,22 @@ st.write("Select a topic and question to answer and get AI-generated marking.")
 topics = question_df['topic'].unique()
 selected_topic = st.selectbox("Choose a topic:", topics)
 
+# sub_topics = question_df['sub_topic'].unique()
+# selected_sub_topic = st.selectbox("Choose a sub topic:", sub_topics)
+
+# questions_in_topic = question_df[question_df['sub_topic'] == selected_sub_topic]
+
 questions_in_topic = question_df[question_df['topic'] == selected_topic]
 question_texts = questions_in_topic['question_text'].tolist()
 
 selected_question = st.selectbox("Select a question:", question_texts)
 question_row = questions_in_topic[questions_in_topic['question_text'] == selected_question].iloc[0]
+st.markdown(f"**Question:** {selected_question}")
 
 question_text = question_row['question_text']
 mark_scheme = question_row['mark_scheme']
 max_marks = question_row['max_marks']
+
 
 st.markdown(f"**Max Marks:** {question_row['max_marks']}")
 
