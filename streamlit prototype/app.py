@@ -159,9 +159,10 @@ if st.button("Mark My Answer") and student_answer.strip():
                     exam_tip = line
                 current_section = None
 
-        awarded = 0
-        awarded = min(int(awarded), int(max_marks))
+
+        
         awarded = total_marks.split("/")[0].strip() if total_marks else "0"
+        awarded = min(int(awarded), int(max_marks))
 
         if int(awarded) >= int(max_marks):
             st.success(f"✅ Full marks! {total_marks}")
