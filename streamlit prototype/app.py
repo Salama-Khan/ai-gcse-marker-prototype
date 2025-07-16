@@ -141,7 +141,7 @@ if st.button("Mark My Answer") and student_answer.strip():
         for line in lines:
             line = line.strip()
             if line.startswith("### Total Marks:"):
-                current_section = "total_marks"
+                total_marks = line.replace("### Total Marks:", "").strip()
                 continue
             elif line.startswith("### Feedback:"):
                 current_section = "feedback"
