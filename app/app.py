@@ -150,7 +150,7 @@ if st.button("Mark My Answer") and student_answer.strip():
         for line in lines:
             line = line.strip()
             if line.startswith("### Total Marks:"):
-                current_section = "total_marks"
+                total_marks = line.replace("### Total Marks:", "").strip()
                 continue
             elif line.startswith("### Feedback:"):
                 current_section = "feedback"
@@ -169,10 +169,17 @@ if st.button("Mark My Answer") and student_answer.strip():
                 current_section = None
         
 
+<<<<<<< HEAD
         awarded = total_marks.split("/")[0].strip() if total_marks else "0"
         awarded = int(awarded)
         awarded = min(awarded, max_marks)
 
+=======
+
+        
+        awarded = total_marks.split("/")[0].strip() if total_marks else "0"
+        awarded = min(int(awarded), int(max_marks))
+>>>>>>> e8357f95b4d3f0f280f136931826a84beddc4703
 
         if int(awarded) >= int(max_marks):
             st.success(f"✅ Full marks! {total_marks}")
