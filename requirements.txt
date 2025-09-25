@@ -1,5 +1,8 @@
-streamlit
-openai
-pandas
-gspread
-google-auth
+# Core
+streamlit~=1.38
+openai~=1.40
+pandas~=2.2
+
+# Google Sheets
+gspread~=6.1
+google-auth~=2.35

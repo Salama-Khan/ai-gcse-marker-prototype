@@ -21,6 +21,9 @@ dist/
 # dotenv
 .env
 .env.*
+venv/
+.venv
+env/
 
 # streamlit
 .streamlit/secrets.toml
