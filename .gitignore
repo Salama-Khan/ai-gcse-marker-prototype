@@ -1,1 +1,35 @@
+
+# virtual environments
+.venv/
+env/
+venv/
+
+# python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# build / packaging
+build/
+dist/
+*.egg-info/
+
+# jupyter / notebooks
+.ipynb_checkpoints/
+
+# dotenv
+.env
+.env.*
+
+# streamlit
 .streamlit/secrets.toml
+
+# logs / outputs
+out/
+logs/
+*.log
+
+# OS-specific
+.DS_Store
+Thumbs.db

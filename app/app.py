@@ -20,7 +20,7 @@ gc = gspread.authorize(creds)
 sheet = gc.open_by_key(SHEET_KEY).sheet1
 
 
-url = "https://raw.githubusercontent.com/Salama-Khan/scaling-guide/main/streamlit%20prototype/question_bankbio.csv"
+url = "https://raw.githubusercontent.com/Salama-Khan/scaling-guide/main/app/question_bankbio.csv"
 question_df = pd.read_csv(url)
 
 
@@ -65,6 +65,8 @@ st.markdown(f"**Question:** {selected_question}")
 question_text = question_row['question_text']
 mark_scheme = question_row['mark_scheme']
 max_marks = question_row['max_marks']
+max_marks = int(float(max_marks))
+
 
 
 st.markdown(f"**Max Marks:** {question_row['max_marks']}")
@@ -72,10 +74,15 @@ st.markdown(f"**Max Marks:** {question_row['max_marks']}")
 student_answer = st.text_area("Enter your answer:")
 
 SYSTEM_PROMPT = """
-You are an expert GCSE Biology exam marker. Mark answers using the provided mark scheme.
-Award only what is clearly earned, following official criteria strictly.
+You are an expert GCSE Biology exam marker following the AQA guidelines. Mark answers strictly based on the mark scheme provided.
 
-Use this format:
+**Marking Instructions:**
+- Award marks only if the answer fully meets each marking point, including correct working if required.
+- Do not award marks for correct final answers reached with incorrect or missing working.
+- Never exceed the total maximum marks stated in the mark scheme.
+- If there is ambiguity, err on the side of strictness.
+
+**Output Format:**
 
 ### Question:
 {question}
@@ -91,16 +98,18 @@ Use this format:
 |-----------|------|------|
 | (criterion 1) | Fully met / Not met | X |
 | (criterion 2) | Fully met / Not met | X |
+...
 
 ### Total Marks:
-X / Total Marks
+X / (max marks)
 
 ### Feedback:
-{constructive_feedback}
+A clear, constructive short paragraph to guide the student, e.g. what they did well, what they can fix.
 
 ### Exam Tip:
-{one_improvement_tip}
+One practical revision or exam technique suggestion.
 """
+
 
 if st.button("Mark My Answer") and student_answer.strip():
     user_prompt = f"""
@@ -158,9 +167,12 @@ if st.button("Mark My Answer") and student_answer.strip():
                 elif current_section == "exam_tip":
                     exam_tip = line
                 current_section = None
+        
 
-        awarded = min(int(awarded), int(max_marks))
         awarded = total_marks.split("/")[0].strip() if total_marks else "0"
+        awarded = int(awarded)
+        awarded = min(awarded, max_marks)
+
 
         if int(awarded) >= int(max_marks):
             st.success(f"✅ Full marks! {total_marks}")
