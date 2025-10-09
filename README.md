@@ -1,22 +1,34 @@
-# AI GCSE Biology Marker (Streamlit Prototype)
+# 🧠 AI GCSE Biology Marker (Streamlit Prototype)
 
-Prompt-engineering prototype that scores short student answers against an exam board mark scheme and returns:
-- **awarded_mark / max_mark**
-- **structured feedback** (what was correct/missed)
-- **exam tip** (how to approach next time)
+A **Streamlit-based AI marking prototype** that evaluates short GCSE Biology answers against a given mark scheme using prompt engineering.  
+It provides:
+- **Awarded Mark / Max Mark**
+- **Structured Feedback** — what was correct or missing
+- **Exam Tip** — how to improve next time
 
-> Status: prototype. Streamlit app + prompt-engineered backend.
+> ⚙️ Status: Working prototype — local version stable, Streamlit Cloud deployment in progress.
 
-## What’s here
-- `streamlit prototype/` — Streamlit UI and logic (prototype)
-- `.devcontainer/` — dev container config
-- `test/` — tests or scratch cases
-- `requirements.txt` — Python deps
+---
 
-## Next steps
-- Flatten folders and set a clean entrypoint (`app/app.py`)
-- Add `.env.example` and config
-- Add small evaluation harness
+## 🚀 Features
+- Simple, interactive **Streamlit UI**
+- **OpenAI-based grading logic** via prompt engineering
+- Optional **Google Sheets integration** for saving results
+- Easy environment setup with `.env.example`
 
-## License
-MIT (to be added)
+---
+
+## 📦 Quickstart
+
+```bash
+# 1️⃣ Clone the repo and install dependencies
+git clone https://github.com/Salama-Khan/ai-gcse-biology-marker.git
+cd ai-gcse-biology-marker
+pip install -r requirements.txt
+
+# 2️⃣ Add your environment variables
+cp .env.example .env
+# Fill in your OpenAI key (and optional Google Sheet details)
+
+# 3️⃣ Run the app
+streamlit run app/app.py
