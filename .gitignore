@@ -24,7 +24,7 @@ dist/
 venv/
 .venv
 env/
-
+!.env.example
 # streamlit
 .streamlit/secrets.toml
 
