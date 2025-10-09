@@ -1,4 +1,5 @@
 # 🧠 AI GCSE Biology Marker (Streamlit Prototype)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A **Streamlit-based AI marking prototype** that evaluates short GCSE Biology answers against a given mark scheme using prompt engineering.  
 It provides:
