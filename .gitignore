@@ -1,38 +1,43 @@
-
-# virtual environments
+# ---- Virtual environments
 .venv/
-env/
 venv/
+env/
 
-# python cache
+# ---- Python cache
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 
-# build / packaging
+# ---- Build / packaging
 build/
 dist/
 *.egg-info/
 
-# jupyter / notebooks
+# ---- Jupyter
 .ipynb_checkpoints/
 
-# dotenv
+# ---- Dotenv / secrets
 .env
 .env.*
-venv/
-.venv
-env/
 !.env.example
-# streamlit
+# Service account or other local creds (rename to your actual filename)
+credentials.json
+
+# ---- Streamlit
 .streamlit/secrets.toml
 
-# logs / outputs
+# ---- Logs / outputs
 out/
 logs/
 *.log
 
-# OS-specific
+# ---- Tools / IDE
+.mypy_cache/
+.pytest_cache/
+.vscode/
+.idea/
+
+# ---- OS-specific
 .DS_Store
 Thumbs.db
