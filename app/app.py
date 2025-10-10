@@ -150,7 +150,15 @@ if st.button("Mark My Answer") and student_answer.strip():
         for line in lines:
             line = line.strip()
             if line.startswith("### Total Marks:"):
-                total_marks = line.replace("### Total Marks:", "").strip()
+            # try same-line first: "### Total Marks: 2 / 4"
+                m = re.search(r"(\d+)\s*/\s*(\d+)", line)
+                if m:
+                    total_marks = f"{m.group(1)} / {m.group(2)}"
+                    current_section = None
+                else:
+                    # numbers are likely on the next line
+                    current_section = "total_marks"
+    
                 continue
             elif line.startswith("### Feedback:"):
                 current_section = "feedback"
@@ -161,7 +169,10 @@ if st.button("Mark My Answer") and student_answer.strip():
 
             if current_section and line:
                 if current_section == "total_marks":
-                    total_marks = line
+                    m = re.search(r"(\d+)\s*/\s*(\d+)", line)
+                    if m:
+                        total_marks = f"{m.group(1)} / {m.group(2)}"
+                        current_section = None
                 elif current_section == "feedback":
                     feedback = line
                 elif current_section == "exam_tip":
@@ -170,8 +181,7 @@ if st.button("Mark My Answer") and student_answer.strip():
         
 
         awarded = total_marks.split("/")[0].strip() if total_marks else "0"
-        awarded = int(awarded)
-        awarded = min(awarded, max_marks)
+        awarded = min(int(awarded), int(max_marks))
 
 
         if int(awarded) >= int(max_marks):
