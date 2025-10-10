@@ -30,9 +30,6 @@ It automatically produces:
 
 
 ```markdown
-![App Screenshot](docs/screenshot1.png)
-![App Screenshot](docs/screenshot2.png)
-![App Screenshot](docs/screenshot3.png)
 📦 Quickstart
 bash
 Copy code
