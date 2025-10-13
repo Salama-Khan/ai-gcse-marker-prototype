@@ -34,7 +34,7 @@ It automatically produces:
 bash
 Copy code
 # 1️⃣ Clone the repo and install dependencies
-git clone https://github.com/Salama-Khan/ai-gcse-biology-marker.git
+git clone https://github.com/Salama-Khan/ai-gcse-marker-prototype
 cd ai-gcse-biology-marker
 pip install -r requirements.txt
 
